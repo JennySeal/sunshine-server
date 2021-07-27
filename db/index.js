@@ -15,6 +15,9 @@ const proConfig = {
     connectionString: process.env.DATABASE_URL
 }
 
+
+console.log(proConfig)
+
 const pool = new Pool(process.env.NODE_ENV === 'production' ? proConfig : devConfig)
 
 const getProducts = (req, res) => {
