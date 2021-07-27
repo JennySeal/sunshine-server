@@ -23,7 +23,8 @@ const pool = new Pool(process.env.NODE_ENV === 'production' ? proConfig : devCon
 const getProducts = (req, res) => {
     pool.query('SELECT * FROM products ORDER BY product_id ASC', (error, results) => {
         if (error) {
-            throw `this isn't working proConfig is ${proConfig}`
+            console.log(proConfig)
+            throw `this isn't working proConfig is ${proConfig.connectionString}`
         }
         res.status(200).json(results.rows)
     })
