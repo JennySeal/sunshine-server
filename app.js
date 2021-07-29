@@ -34,7 +34,7 @@ if (process.env.NODE_ENV === 'production') {
 
 
 app.get('/', (request, response) => {
-  response.json({ info: `I really miss Miss Moneypenny` })
+  response.json({ info: `I really miss Miss Moneypenny - my Cors whitelist is ${CORS_WHITELIST}` })
 })
 
 
