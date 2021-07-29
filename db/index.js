@@ -58,7 +58,7 @@ const addUser = (req, res) => {
         if (error) {
             throw error;
         }
-        res.status(201).send(`User added with ID: ${results.rows[0].customer_id}`)
+        res.status(201).json(results.rows[0])
     })
 }
 
